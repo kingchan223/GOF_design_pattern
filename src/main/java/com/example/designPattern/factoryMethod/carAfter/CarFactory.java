@@ -16,14 +16,9 @@ public interface CarFactory {
 
     Car createCar();
 
-
     private void validate(String name, String email){
-        if(name == null || name.isBlank()){
-            throw new IllegalArgumentException("자동차 이름을 지어주세요");
-        }
-        if(email == null || email.isBlank()){
-            throw new IllegalArgumentException("이메일을 남겨주세요");
-        }
+        if(name == null || name.isBlank()) throw new IllegalArgumentException("자동차 이름을 지어주세요");
+        if(email == null || email.isBlank()) throw new IllegalArgumentException("이메일을 남겨주세요");
     }
 
     private void prepareFor(String name) {
