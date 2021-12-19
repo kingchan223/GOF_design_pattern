@@ -1,10 +1,10 @@
-package com.example.designPattern.composite;
+package com.example.designPattern.composite.before;
 
-public class Item {
+public class Weapon {
     String name;
     int price;
 
-    public Item(String name, int price) {
+    public Weapon(String name, int price) {
         this.name = name;
         this.price = price;
     }
