@@ -1,5 +1,6 @@
 package com.example.designPattern.decorator.after;
 
+/*Concrete Decorator*/
 public class TrimmingCommentDecorator extends CommentDecorator {
 
     public TrimmingCommentDecorator(CommentService commentService) {

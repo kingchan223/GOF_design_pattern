@@ -3,16 +3,19 @@ package com.example.designPattern.decorator.after;
 public class App {
 
     private static boolean enabledSpamFilter = true;
-
-    private static boolean enabledTrimming = true;
+    private static boolean enabledTrimming = false;
+    private static boolean enabledDate = false;
 
     public static void main(String[] args) {
-        CommentService commentService = new DefaultCommentService();
 
+        CommentService commentService = new DefaultCommentService();
+        /*런타임시에 추가된다.*/
         if (enabledSpamFilter)
             commentService = new SpamFilteringCommentDecorator(commentService);
         if (enabledTrimming)
             commentService = new TrimmingCommentDecorator(commentService);
+        if(enabledDate)
+            commentService = new DateCommentDecorator(commentService);
 
         Client client = new Client(commentService);
         client.writeComment("오징어게임");

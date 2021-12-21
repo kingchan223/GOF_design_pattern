@@ -1,6 +1,6 @@
 package com.example.designPattern.decorator.after;
 
-//component interface
+/*Component Interface*/
 public interface CommentService {
     void addComment(String comment);
 }

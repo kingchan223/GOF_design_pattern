@@ -1,6 +1,6 @@
 package com.example.designPattern.decorator.after;
 
-//concrete component
+/*Concrete Component*/
 public class DefaultCommentService implements CommentService {
     @Override
     public void addComment(String comment) {

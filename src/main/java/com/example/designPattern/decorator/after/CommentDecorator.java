@@ -1,9 +1,10 @@
 package com.example.designPattern.decorator.after;
 
-//wrapper. decorator
+/*wrapper, decorator*/
 public class CommentDecorator implements CommentService {
 
-    private CommentService commentService;//wrappee
+    /*wrappee*/
+    private CommentService commentService;
 
     public CommentDecorator(CommentService commentService) {
         this.commentService = commentService;
