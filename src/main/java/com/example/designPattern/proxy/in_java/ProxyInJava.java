@@ -16,6 +16,7 @@ public class ProxyInJava {
         gameServiceProxy.startGame();
     }
 
+    //해당 메소드가 실행될 때, 프록시 객체가 생성된다.
     private GameService getGameServiceProxy(GameService target) {
         return  (GameService) Proxy.newProxyInstance(this.getClass().getClassLoader(),
                 new Class[]{GameService.class}, (proxy, method, args) -> {
