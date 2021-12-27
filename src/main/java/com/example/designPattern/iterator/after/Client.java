@@ -15,15 +15,14 @@ public class Client {
         for (Post post : posts)
             System.out.println(post.getTitle());
 
-        for(int i=0; i<posts.size(); i++){
-            Post post = posts.get(i);
-            System.out.println(post.getTitle());
-        }
+        System.out.println();
 
         //가장 최신글 먼저 순회하기
         Iterator<Post> recentPostIterator = board.getRecentPostIterator();/*posts가 어떤 구조인지 몰라도 된다.*/
         while(recentPostIterator.hasNext()){
             System.out.println(recentPostIterator.next().getTitle());
         }
+        // 위의 4줄과 아래 1줄은 같다.
+        board.getRecentPostIterator().forEachRemaining((p) -> System.out.println(p.getTitle()));
     }
 }
