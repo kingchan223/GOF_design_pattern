@@ -31,5 +31,4 @@ public class ChatServer {
             this.subscribers.get(subject).forEach(s -> s.handleMessage(userMessage));
         }
     }
-
 }
