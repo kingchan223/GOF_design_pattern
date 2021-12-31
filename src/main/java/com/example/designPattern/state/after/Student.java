@@ -1,8 +1,11 @@
 package com.example.designPattern.state.after;
 
+import lombok.ToString;
+
 import java.util.HashSet;
 import java.util.Set;
 
+@ToString
 public class Student {
 
     private String name;
@@ -21,10 +24,5 @@ public class Student {
         this.onlineCourses.add(onlineCourse);
     }
 
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                '}';
-    }
+    public String getName() {return name;}
 }

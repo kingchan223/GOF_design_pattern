@@ -2,7 +2,7 @@ package com.example.designPattern.state.after;
 
 public class Draft implements State {
 
-    private OnlineCourse onlineCourse;
+    private OnlineCourse onlineCourse;/* Context를 반드시 가지고 있어야 한다.*/
 
     public Draft(OnlineCourse onlineCourse) {
         this.onlineCourse = onlineCourse;
@@ -16,8 +16,7 @@ public class Draft implements State {
     @Override
     public void addStudent(Student student) {
         this.onlineCourse.getStudents().add(student);
-        if (this.onlineCourse.getStudents().size() > 1) {
+        if (this.onlineCourse.getStudents().size() > 1)
             this.onlineCourse.changeState(new Private(this.onlineCourse));
-        }
     }
 }

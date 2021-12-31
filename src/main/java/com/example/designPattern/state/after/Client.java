@@ -1,20 +1,19 @@
 package com.example.designPattern.state.after;
 
 public class Client {
-
     public static void main(String[] args) {
         OnlineCourse onlineCourse = new OnlineCourse();
-        Student student = new Student("whiteship");
-        Student keesun = new Student("keesun");
-        keesun.addPrivate(onlineCourse);
+        Student lee = new Student("lee");
+        Student kim = new Student("kim");
+        kim.addPrivate(onlineCourse);
 
-        onlineCourse.addStudent(student);
+        onlineCourse.addStudent(lee);
 
-        onlineCourse.changeState(new Private(onlineCourse));
+        onlineCourse.changeState(new Draft(onlineCourse));
 
-        onlineCourse.addReview("hello", student);
+        onlineCourse.addReview("hello 리뷰입니다.", lee);
 
-        onlineCourse.addStudent(keesun);
+        onlineCourse.addStudent(kim);
 
         System.out.println(onlineCourse.getState());
         System.out.println(onlineCourse.getReviews());
